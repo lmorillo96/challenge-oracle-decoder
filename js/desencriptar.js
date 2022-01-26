@@ -16,14 +16,11 @@ desencriptar.addEventListener('click', (e) => {
     mensajeEncriptado.value = msgEncriptado;
     msgValue = mensaje.value;
     msgEncriptado = decryptPhrase();
-    if (mensaje.value == ""){
-        alert("Dude pls, you can't decrypt a Anything")
-    }
+    mensaje.value = validarDencrypt()
 })
 
 
 function decryptPhrase () {
-
     for(let i = 0; i < Object.keys(reglas2).length; i++) {
         while(msgValue.indexOf(Object.keys(reglas2)[i]) > -1){
             msgValue = msgValue.replace(Object.keys(reglas2)[i],reglas2[Object.keys(reglas2)[i]]);
