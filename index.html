@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encrypt Game</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="title">
+    <h1 class="titulo">Secret Messagge</h1>
+    <div class="title__content">
+      <p class="paragraph">Hi, dear player. If you want decode your messagge, you should follow a several instruccions</p>
+      <ul class="list">
+        <li>1. It's only work with lowercase. You shouldn't used camelcase. I'm watching you!</li>
+        <li>2. Also, You shouldn't used special characters.</li>
+        <li>3. The phrase that you choise, could used in both cases. I mean, use encrypt messagge to descrypt, It should be able to work!</li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="form box">
+      <form action="">
+        <p class="paragraph__main">Type your phrase! Remember the rules</p>
+        <input class="text-input" type="text" name="input-texto" id="input-texto" placeholder="Put your text here">
+        <input class="btn" type="submit" value="Encrypt" id="btn-encriptar">
+        <input class="btn" type="submit" value="Decrypt" id="btn-desencriptar">
+      </form>
+    </section>
+  
+    <section class="msg box">
+      <p class="paragraph__main">Encrypt Messagge:</p>
+      <input class="text-input" type="text" id="msg" placeholder="Encrypt Message"></input>
+      <input class="btn" type="submit" value="Copy" id="btn-copy">
+    </section>
+  </main>
+
+<footer class="footer">
+
+    <p class="contact__copyright">
+        Ejercicio realizado por &copy; Leandro Morillo
+    </p>
+
+</footer>
+
+<script src="js/encriptar.js"></script>
+<script src="js/copiar.js"></script>
+<script src="js/desencriptar.js"></script>
+
+</body>
+</html>
