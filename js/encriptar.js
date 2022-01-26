@@ -13,9 +13,7 @@ let reglas = {
 encriptar.addEventListener('click', (e) => {
     e.preventDefault();
     mensajeEncriptado.value = encryptPhrase();
-    if (mensaje.value == ""){
-        alert("I told you, write something")
-    }
+    mensaje.value = validar();
 });
 
 
@@ -36,6 +34,17 @@ function encryptPhrase() {
     }
 
     return arr2.join('');
+}
+
+function validar() {
+    if (mensaje.value == ""){
+       alert("I told you, write something")
+   }
+
+   if (mensaje.value != mensaje.value.toLowerCase()) {
+       alert("Without Mayus");
+       mensajeEncriptado.value = mensajeEncriptado.innerHTML = "";
+   }
 }
 
 
