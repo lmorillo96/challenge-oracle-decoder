@@ -6,7 +6,7 @@ function validarEncrypt() {
    if (mensaje.value != mensaje.value.toLowerCase()) {
        alert("Without Mayus");
        mensajeEncriptado.value = mensajeEncriptado.innerHTML = "";
-       mensaje.value = mensaje.value.innerHTML = "";
+       mensaje.value.innerHTML = "";
     }
 }
 
@@ -18,6 +18,6 @@ function validarDencrypt() {
     if (mensaje.value != mensaje.value.toLowerCase()) {
         alert("Without Mayus");
         mensajeEncriptado.value = mensajeEncriptado.innerHTML = "";
-        mensaje.value = mensaje.value.innerHTML = "";
+        mensaje.value.innerHTML = "";
     }
 }
