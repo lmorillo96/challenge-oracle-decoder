@@ -91,3 +91,9 @@ body {
   content: "leandro.m9601@gmail.com";
   color: blue;
 }
+
+@media (max-width: 425px) {
+  .main {
+    flex-direction: column;
+  }
+}
