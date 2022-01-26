@@ -44,7 +44,8 @@ body {
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   background: #A3E4DB;
   border-radius: 0.5em;
-  width: 30vw;
+  width: 50%;
+  margin-bottom: 20px;
   height: auto;
 }
 
@@ -95,5 +96,12 @@ body {
 @media (max-width: 425px) {
   .main {
     flex-direction: column;
+    align-items: center;
+  }
+
+  .footer {
+    font-size: 12px;
+    text-align: center;
+    margin: 0 auto;
   }
 }
