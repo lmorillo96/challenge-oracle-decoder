@@ -16,7 +16,14 @@ desencriptar.addEventListener('click', (e) => {
     mensajeEncriptado.value = msgEncriptado;
     msgValue = mensaje.value;
     msgEncriptado = decryptPhrase();
-    mensaje.value = validarDencrypt()
+    
+    if (validarDecrypt() == true) { 
+        decryptPhrase();
+        msgValue = "";
+    } else {
+        mensajeEncriptado.innerHTML = "";
+        mensaje.innerHTML = "";
+    }
 })
 
 
