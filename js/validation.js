@@ -13,12 +13,6 @@ function validarEncrypt() {
         return false;
     }
 
-    if (mensaje.value = "-") {
-        alert("Whithout special Characters")
-        mensajeEncriptado.value = mensajeEncriptado.innerHTML = "";
-        return false;
-    }
-    
     return true;
 }
 
@@ -34,11 +28,6 @@ function validarDecrypt() {
         return false;
     }
 
-    if (mensaje.value = "-") {
-        alert("Whithout special Characters")
-        mensajeEncriptado.value = mensajeEncriptado.innerHTML = "";
-        return false;
-    }
-
     return true;
 }
+

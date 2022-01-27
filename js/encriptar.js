@@ -21,6 +21,7 @@ encriptar.addEventListener('click', (e) => {
         mensajeEncriptado.innerHTML = "";
         mensaje.innerHTML = "";
     }
+
 });
 
 
