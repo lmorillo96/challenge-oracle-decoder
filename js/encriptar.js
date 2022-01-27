@@ -13,6 +13,7 @@ let reglas = {
 encriptar.addEventListener('click', (e) => {
     e.preventDefault();
     mensajeEncriptado.value = encryptPhrase();
+    validateString(mensaje.value);
 
     if (validarEncrypt() == true) { 
         mensajeEncriptado.value = encryptPhrase();
