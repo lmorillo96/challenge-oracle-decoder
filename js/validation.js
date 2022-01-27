@@ -35,7 +35,7 @@ function validarDecrypt() {
 
 //Input validation
 
-function validateString(mensaje.value){
+function validateString(mensajeEncriptado){
     array = mensaje.value.split('');
     var error = false;
     for(var i = 0; i < array.length; i++){
