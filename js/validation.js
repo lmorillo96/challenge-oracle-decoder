@@ -1,54 +1,20 @@
-let validador = true;
-
-function validarEncrypt() {
-
-    if (mensaje.value == ""){
-        alert("I told you, write something");
-        return false;
-    }
-
-    if (mensaje.value != mensaje.value.toLowerCase())  {
-        alert("Without Mayus");
-        mensajeEncriptado.value = mensajeEncriptado.innerHTML = "";
-        return false;
-    }
-
-    return true;
-}
-
-function validarDecrypt() {
-    if (mensaje.value == ""){
-        alert("Dude pls, you can't decrypt a Anything");
-        return false;
-    }
-
-    if (mensaje.value != mensaje.value.toLowerCase()) {
-        alert("Without Mayus");
-        mensajeEncriptado.value = mensajeEncriptado.innerHTML = "";
-        return false;
-    }
-
-    return true;
-}
-
-// Errors 
-
 //Input validation
 
-function validateString(mensajeEncriptado){
-    array = mensaje.value.split('');
+function validateString(userInput){
     var error = false;
-    for(var i = 0; i < array.length; i++){
-        if (array[i].codePointAt(0) != 32 && (array[i].codePointAt(0) < 97 || array[i].codePointAt(0) > 122) && (array[i].codePointAt(0) < 65 || array[i].codePointAt(0) > 90)){
+    let res = null;
+    res = userInput.match(new RegExp(/[a-z\s]+/));
+
+    if(res != null){
+        if(res["0"] != userInput){
             error = true;
-            break;
         }
+    }else{
+        error = true;
     }
+    if(userInput.trim(" ") == ""){
+        error = true;
+    }
+
     return error;
 }
-
-/* //Error message
-function errorMsg() {
-    var error = document.querySelector("#error");
-    error.textContent = "Error. Ha ingresado un carácter inválido.";
-} */

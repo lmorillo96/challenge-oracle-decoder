@@ -13,25 +13,20 @@ let reglas2 = {
 
 desencriptar.addEventListener('click', (e) => {
     e.preventDefault();
-    mensajeEncriptado.value = msgEncriptado;
-    msgValue = mensaje.value;
-    msgEncriptado = decryptPhrase();
     
-    if (validarDecrypt() == true) { 
-        decryptPhrase();
-        msgValue = "";
-    } else {
-        mensajeEncriptado.innerHTML = "";
-        mensaje.innerHTML = "";
+    if(!validateString(mensaje.value)){
+        mensajeEncriptado.value = decryptPhrase(mensaje.value);
+    }else{
+        alert("Read the instructions, pls!");
     }
 })
 
 
-function decryptPhrase () {
+function decryptPhrase (phrase) {
     for(let i = 0; i < Object.keys(reglas2).length; i++) {
-        while(msgValue.indexOf(Object.keys(reglas2)[i]) > -1){
-            msgValue = msgValue.replace(Object.keys(reglas2)[i],reglas2[Object.keys(reglas2)[i]]);
+        while(phrase.indexOf(Object.keys(reglas2)[i]) > -1){
+            phrase = phrase.replace(Object.keys(reglas2)[i],reglas2[Object.keys(reglas2)[i]]);
         }
     }
-    return msgValue;
+    return phrase;
 }
