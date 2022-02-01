@@ -1,7 +1,8 @@
 let desencriptar = document.querySelector('#btn-desencriptar');
-
 let msgEncriptado = "";
 let msgValue = "";
+
+// Objeto para desencriptar palabras
 
 let reglas2 = {
     "enter" : "e",
@@ -10,6 +11,8 @@ let reglas2 = {
     "ober" : "o",
     "ufat" : "u",
 }
+
+// Evento para llamar la función desencriptar mediante un click.
 
 desencriptar.addEventListener('click', (e) => {
     e.preventDefault();
@@ -21,6 +24,7 @@ desencriptar.addEventListener('click', (e) => {
     }
 })
 
+// Función desencriptar frase.
 
 function decryptPhrase (phrase) {
     for(let i = 0; i < Object.keys(reglas2).length; i++) {

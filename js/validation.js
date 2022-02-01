@@ -3,7 +3,7 @@
 function validateString(userInput){
     var error = false;
     let res = null;
-    res = userInput.match(new RegExp(/[a-z\s]+/));
+    res = userInput.match(new RegExp(/[a-z\s]+/)); // Expresión regular para permitir solo minusculas y espacios. 
 
     if(res != null){
         if(res["0"] != userInput){

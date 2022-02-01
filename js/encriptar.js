@@ -2,6 +2,8 @@ let mensaje = document.querySelector('#input-texto');
 let encriptar = document.querySelector('#btn-encriptar');
 let mensajeEncriptado = document.querySelector('#msg');
 
+// Objeto con reglas del texto
+
 let reglas = {
     "e" : "enter",
     "i" : "imes",
@@ -9,6 +11,8 @@ let reglas = {
     "o" : "ober",
     "u" : "ufat",
 }
+
+// Evento para llamar a la función una vez se le da click al botón de encriptar.
 
 encriptar.addEventListener('click', (e) => {
     e.preventDefault();
@@ -20,6 +24,7 @@ encriptar.addEventListener('click', (e) => {
     }
 });
 
+// Función para enctiptar texto
 
 function encryptPhrase() {
 

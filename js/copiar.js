@@ -1,5 +1,7 @@
 let btnCopy = document.querySelector('#btn-copy');
 
+// Llamar a la función que copiará el texto encriptado.
+
 btnCopy.addEventListener('click', () => {
     copiarTexto();
 })
